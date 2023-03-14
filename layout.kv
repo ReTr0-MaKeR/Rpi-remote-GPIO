@@ -1,0 +1,42 @@
+<Function>:
+
+    MDTextField:
+        id: ip
+        pos_hint: {"center_x": .5, "center_y":.85}
+        hint_text: "Enter your Ip to connect"
+        padding: "8dp"
+
+        helper_text_mode: "on_focus"
+
+    MDRaisedButton:
+        text: "connect"
+        pos_hint: {"center_x": .5, "center_y":.7}
+        on_release: root.connect()
+    MDLabel:
+        text:'LED'
+        font_style:'H4'
+        pos_hint:{'center_x': .25,'center_y':.9}
+        #halign:'center'
+    MDRoundFlatButton:
+        text: 'Led On'
+        pos_hint: {'center_x': .25,'center_y':.55}
+        md_bg_color: 0, 0, 0, 1
+        text_color: 0, 1, 0, 1
+        on_release: root.on_led()
+    MDRoundFlatButton:
+        text: 'Led Off'
+        pos_hint: {'center_x': .25,'center_y':.45}
+        md_bg_color: 0, 0, 0, 1
+        text_color: 1, 0, 0, 1
+        on_release: root.off_led()
+    MDRoundFlatButton:
+        text: 'Servo +'
+        pos_hint: {'center_x': .75,'center_y':.55}
+        text_color: 0, 1, 0, 1
+        on_release: root.go_max()
+    MDRoundFlatButton:
+        text: 'Servo -'
+        pos_hint: {'center_x': .75,'center_y':.45}
+        text_color: 1, 0, 0, 1
+        on_release: root.go_min()
+
